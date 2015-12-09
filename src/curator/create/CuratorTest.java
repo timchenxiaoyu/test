@@ -18,7 +18,7 @@ import org.apache.zookeeper.data.Stat;
 
 public class CuratorTest {
     private CuratorFramework zkTools;
-    private ConcurrentSkipListSet watchers = new ConcurrentSkipListSet();
+    private ConcurrentSkipListSet<String> watchers = new ConcurrentSkipListSet<String>();
     private static Charset charset = Charset.forName("utf-8");
    
    
@@ -116,7 +116,7 @@ public class CuratorTest {
            zkTools.delete().forPath(registeNode);
        }
        zkTools.create()
-       .creatingParentsIfNeeded()          .withMode(CreateMode.EPHEMERAL)
+       .creatingParentsIfNeeded().withMode(CreateMode.EPHEMERAL)
        .withACL(ZooDefs.Ids.OPEN_ACL_UNSAFE)
        .forPath(registeNode,data);//创建的路径和值
       
