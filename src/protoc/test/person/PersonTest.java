@@ -1,5 +1,7 @@
 package protoc.test.person;
 
+//we must generate the protoc file by 
+// .\protoc.exe  --java_out=..\src   person.proto   in windows
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
