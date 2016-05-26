@@ -6,6 +6,7 @@ import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.curator.utils.CloseableUtils;
 
+//×¢ÊÍ
 public class CreateClientExample {
 	private static final String PATH = "/example/basic";
 	
